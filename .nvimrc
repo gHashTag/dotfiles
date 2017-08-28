@@ -10,15 +10,11 @@ Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 let g:deoplete#enable_at_startup = 1
-let g:python3_host_prog = '/usr/local/bin/python3'
-let g:python_host_prog = '/usr/bin/python'
+"let g:python3_host_prog = '/usr/local/bin/python3'
+"let g:python_host_prog = '/usr/bin/python'
 
 " Track the engine.
 Plug 'SirVer/ultisnips'
-Plug 'dzhou121/gonvim'
-let g:gonvim_draw_split = 1
-let g:gonvim_draw_statusline = 1
-let g:gonvim_draw_lint = 1
 
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
@@ -73,20 +69,15 @@ nmap <C-t> :TagbarToggle<CR>
 set pastetoggle=<C-j>
 " Trigger configuration React Snippets
 let g:UltiSnipsExpandTrigger="<C-l>"
-let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsEditSplit="vertical"
 " Tagbar
 let g:tagbar_ctags_bin='/usr/bin/ctags'
 " Airline
 nnoremap <silent> <LocalLeader>[ :bp
 nnoremap <silent> <LocalLeader>] :bn
-nnoremap  <leader>rc   <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
 " Ctrl-p
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
-" Trigger configuration React Snippets
-let g:UltiSnipsExpandTrigger="<C-l>"
-let g:UltiSnipsEditSplit="vertical"
 
 " Makros
 let @a='%s/;//g' "заменить ; на удалить

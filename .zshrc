@@ -4,6 +4,8 @@ DEFAULT_USER=`whoami`
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+alias n="nvim"
+alias rni="react-native init"
 alias ios="react-native run-ios --simulator='iPhone SE'"
 alias nvimrc='nvim ~/Documents/dotfiles/.nvimrc'
 alias vimrc='nvim ~/Documents/dotfiles/.vimrc'
