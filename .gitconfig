@@ -1,0 +1,17 @@
+[user]
+	name = playra
+	email = raoffonom@icloud.com
+[merge]
+  opendiff  
+[core]
+	excludesfile = /Users/dmitriyvasilev/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[merge]
+	tool = opendiff
+[color]
+	ui = true
