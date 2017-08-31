@@ -2,16 +2,18 @@ call plug#begin('~/.config/nvim/plugged')
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jiangmiao/auto-pairs'
-Plug 'tellijo/vim-react-native-snippets'
+
 " Use deoplete.
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 Plug 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'tellijo/vim-react-native-snippets'
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 let g:deoplete#enable_at_startup = 1
-"let g:python3_host_prog = '/usr/local/bin/python3'
-"let g:python_host_prog = '/usr/bin/python'
 
 " Track the engine.
 Plug 'SirVer/ultisnips'
@@ -28,7 +30,11 @@ Plug 'pangloss/vim-javascript'
 Plug 'othree/yajs'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+
+" Ctrl P
 Plug 'kien/ctrlp.vim'
+set wildignore+=*/tmp/*,*/node_modules/*,*/android/*,app.json,yarn.lock,package.json,package-lock.json,*/__tests__/*,*.so,*.swp,*.zip
+
 Plug 'flowtype/vim-flow'
 Plug 'majutsushi/tagbar'
 Plug 'elzr/vim-json'
@@ -78,6 +84,7 @@ nnoremap <silent> <LocalLeader>] :bn
 
 " Ctrl-p
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
+let g:ctrlp_switch_buffer = 'Et'
 " Makros
 let @a='%s/;//g' "заменить ; на удалить
+
