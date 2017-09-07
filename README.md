@@ -10,3 +10,7 @@ ln -s ./Documents/dotfiles/.zshrc .zshrc
 ln -s ./Documents/dotfiles/.gitignore .gitignore
 <br />
 ln -s ./Documents/dotfiles/.gitignore_global .gitignore_global
+<br /> 
+ln -s ./Documents/dotfiles/.editorconfig .editorconfig
+<br /> 
+ln -s ./Documents/dotfiles/.ctags .ctags

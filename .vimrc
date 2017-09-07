@@ -4,12 +4,10 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'tellijo/vim-react-native-snippets'
 " Use deoplete.
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
-let g:deoplete#enable_at_startup = 1
 let g:python3_host_prog = '/usr/local/bin/python3'
 let g:python_host_prog = '/usr/bin/python'
 
