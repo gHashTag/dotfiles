@@ -18,25 +18,32 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'brookhong/cscope.vim'
+" теперь файл будет подхватываться на автомате или браться из переменной среды
+if has("cscope")
+if filereadable("cscope.out")
+cs add cscope.out
+" else add database pointed to by environment
+elseif $CSCOPE_DB != ""
+cs add $CSCOPE_DB
+endif
+endif
+
 nnoremap <Leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
 nnoremap <Leader>l :call ToggleLocationList()<CR>
+
 nmap <Leader>f :cs find g <c-r>=expand("<cword>")<cr><cr>
-" s: Find this C symbol
-nnoremap  <Leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
-" g: Find this definition
-nnoremap  <Leader>fg :call CscopeFind('g', expand('<cword>'))<CR>
-" d: Find functions called by this function
-nnoremap  <Leader>fd :call CscopeFind('d', expand('<cword>'))<CR>
-" c: Find functions calling this function
-nnoremap  <Leader>fc :call CscopeFind('c', expand('<cword>'))<CR>
-" t: Find this text string
-nnoremap  <Leader>ft :call CscopeFind('t', expand('<cword>'))<CR>
-" e: Find this egrep pattern
-nnoremap  <Leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
-" f: Find this file
-nnoremap  <Leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
-" i: Find files #including this file
-nnoremap  <Leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
+
+nmap <C-Space><C-Space>f \:vert :scs find g <C-R>=expand("<cword>")<CR><CR>
+
+nmap <Leader>a :cs find a <C-R>=expand("<cword>")<CR><CR> " a: Найти присвоения этому символу 
+nmap <Leader>c :cs find c <C-R>=expand("<cword>")<CR><CR> " c: Найти функции, вызывающие эту функцию 
+nmap <Leader>d :cs find d <C-R>=expand("<cword>")<CR><CR> " d: Найти функции, вызываемые этой функцией 
+nmap <Leader>e :cs find e <C-R>=expand("<cword>")<CR><CR> " e: Найдите этот рисунок egrep
+nmap <Leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR> " f: Найти этот файл
+nmap <Leader>g :cs find g <C-R>=expand("<cword>")<CR><CR> " g: Найти это определение
+nmap <Leader>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR> " i: Найти файлы # включая этот файл
+nmap <Leader>s :cs find s <C-R>=expand("<cword>")<CR><CR> " s: Найти этот символ C
+nmap <Leader>t :cs find t <C-R>=expand("<cword>")<CR><CR> " t: Найти эту текстовую строку
 
 
 Plug 'ervandew/supertab'
@@ -125,7 +132,7 @@ map <Leader> <Plug>(easymotion-prefix)
 map  <Leader>w <Plug>(easymotion-bd-w)
 :imap jj <Esc>
 :imap оо <Esc> 
-nmap <C-t> :TagbarToggle<CR>
+nmap <C-\> :TagbarToggle<CR>
 set pastetoggle=<C-j>
 " Trigger configuration React Snippets
 let g:UltiSnipsExpandTrigger="<C-l>"
