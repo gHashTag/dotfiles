@@ -48,7 +48,17 @@ call plug#end()
 
 " Color Settings
 syntax enable
-set background=dark
+:set bg=dark
+function! BgToggleSol()
+  if &background == "dark"
+    execute ":set background=light"
+  else
+    execute ":set background=dark"
+  endif
+endfunction
+
+nnoremap <leader>t :call BgToggleSol()<cr>
+
 let g:solarized_termcolors=16
 colorscheme solarized
 " Airline
