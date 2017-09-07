@@ -16,6 +16,29 @@ Plug 'kern/vim-es7'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+
+Plug 'brookhong/cscope.vim'
+nnoremap <Leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
+nnoremap <Leader>l :call ToggleLocationList()<CR>
+nmap <Leader>f :cs find g <c-r>=expand("<cword>")<cr><cr>
+" s: Find this C symbol
+nnoremap  <Leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
+" g: Find this definition
+nnoremap  <Leader>fg :call CscopeFind('g', expand('<cword>'))<CR>
+" d: Find functions called by this function
+nnoremap  <Leader>fd :call CscopeFind('d', expand('<cword>'))<CR>
+" c: Find functions calling this function
+nnoremap  <Leader>fc :call CscopeFind('c', expand('<cword>'))<CR>
+" t: Find this text string
+nnoremap  <Leader>ft :call CscopeFind('t', expand('<cword>'))<CR>
+" e: Find this egrep pattern
+nnoremap  <Leader>fe :call CscopeFind('e', expand('<cword>'))<CR>
+" f: Find this file
+nnoremap  <Leader>ff :call CscopeFind('f', expand('<cword>'))<CR>
+" i: Find files #including this file
+nnoremap  <Leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
+
+
 Plug 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
@@ -28,7 +51,12 @@ let g:deoplete#enable_at_startup = 1
 " красота одним нажатием
 Plug 'maksimr/vim-jsbeautify'
 let g:editorconfig_Beautifier = '~/.editorconfig'
-map <c-f> :call JsBeautify()<cr>
+map <Leader>q :call JsBeautify()<cr>
+autocmd FileType javascript vnoremap <buffer> <Leader>f :call RangeJsBeautify()<cr>
+autocmd FileType json vnoremap <buffer> <Leader>f :call RangeJsonBeautify()<cr>
+autocmd FileType jsx vnoremap <buffer> <Leader>f :call RangeJsxBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <Leader>f :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <Leader>f :call RangeCSSBeautify()<cr>
 
 Plug 'alvan/vim-closetag'                                                         
 let g:closetag_close_shortcut = '<leader>>'                                       
@@ -73,7 +101,7 @@ function! BgToggleSol()
   endif
 endfunction
 
-nnoremap <leader>t :call BgToggleSol()<cr>
+nnoremap <Leader>t :call BgToggleSol()<cr>
 
 let g:solarized_termcolors=16
 colorscheme solarized
@@ -103,7 +131,9 @@ set pastetoggle=<C-j>
 let g:UltiSnipsExpandTrigger="<C-l>"
 "let g:UltiSnipsEditSplit="vertical"
 " Tagbar
-let g:tagbar_ctags_bin='/usr/bin/ctags'
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+nmap <Leader>a :TagbarToggle<CR>
+
 " Airline
 nnoremap <silent> <LocalLeader>[ :bp
 nnoremap <silent> <LocalLeader>] :bn
