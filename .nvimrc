@@ -181,10 +181,11 @@ let g:UltiSnipsExpandTrigger="<C-l>"
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 nmap <Leader>a :TagbarToggle<CR>
 
-" Airline
-nnoremap <silent> <LocalLeader>[ :bp
-nnoremap <silent> <LocalLeader>] :bn
+" Airline change buffer
+nnoremap <silent> <Tab>[ :bp <cr>
+nnoremap <silent> <Tab>] :bn <cr>
 
+" Caps close and quit
 :ca WQ wq
 :ca Wq wq
 :ca W w
@@ -195,3 +196,24 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_switch_buffer = 'Et'
 " Makros
 let @a='%s/;//g' "заменить ; на удалить
+
+"<BS>           Backspace
+"<Tab>          Tab
+"<CR>           Enter
+"<Enter>        Enter
+"<Return>       Enter
+"<Esc>          Escape
+"<Space>        Space
+"<Up>           Up arrow
+"<Down>         Down arrow
+"<Left>         Left arrow
+"<Right>        Right arrow
+"<F1> - <F12>   Function keys 1 to 12
+"#1, #2..#9,#0  Function keys F1 to F9, F10
+"<Insert>       Insert
+"<Del>          Delete
+"<Home>         Home
+"<End>          End
+"<PageUp>       Page-Up
+"<PageDown>     Page-Down
+"<bar>          the '|' character, which otherwise needs to be escaped '\|'
