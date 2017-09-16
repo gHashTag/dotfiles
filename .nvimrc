@@ -2,9 +2,11 @@ call plug#begin('~/.config/nvim/plugged')
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 
 " Use deoplete.
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+set completeopt+=preview
 
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
@@ -47,7 +49,7 @@ nmap <Leader>e :cs find e <C-R>=expand("<cword>")<CR><CR> " e: Найдите э
 nmap <Leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR> " f: Найти этот файл
 nmap <Leader>g :cs find g <C-R>=expand("<cword>")<CR><CR> " g: Найти это определение
 nmap <Leader>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR> " i: Найти файлы # включая этот файл
-nmap <Leader>s :cs find s <C-R>=expand("<cword>")<CR><CR> " s: Найти этот символ C
+"nmap <Leader>s :cs find s <C-R>=expand("<cword>")<CR><CR> " s: Найти этот символ C
 nmap <Leader>t :cs find t <C-R>=expand("<cword>")<CR><CR> " t: Найти эту текстовую строку
 
 
@@ -56,19 +58,11 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+
 Plug 'tellijo/vim-react-native-snippets'
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 let g:deoplete#enable_at_startup = 1
 
-" красота одним нажатием
-Plug 'maksimr/vim-jsbeautify'
-let g:editorconfig_Beautifier = '~/.editorconfig'
-map <Leader>q :call JsBeautify()<cr>
-autocmd FileType javascript vnoremap <buffer> <Leader>f :call RangeJsBeautify()<cr>
-autocmd FileType json vnoremap <buffer> <Leader>f :call RangeJsonBeautify()<cr>
-autocmd FileType jsx vnoremap <buffer> <Leader>f :call RangeJsxBeautify()<cr>
-autocmd FileType html vnoremap <buffer> <Leader>f :call RangeHtmlBeautify()<cr>
-autocmd FileType css vnoremap <buffer> <Leader>f :call RangeCSSBeautify()<cr>
 
 Plug 'alvan/vim-closetag'                                                         
 let g:closetag_close_shortcut = '<leader>>'                                       
@@ -180,6 +174,9 @@ let g:UltiSnipsExpandTrigger="<C-l>"
 " Tagbar
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 nmap <Leader>a :TagbarToggle<CR>
+
+" NERD Commenter 
+filetype plugin on
 
 " Airline change buffer
 nnoremap <silent> <Tab>[ :bp <cr>
