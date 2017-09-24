@@ -1,4 +1,5 @@
 # dotfiles
+Install fonts https://github.com/powerline/fonts/
 Add links in ~/
 <br />
 ln -s  ./Documents/dotfiles/.vimrc .vimrc
@@ -14,3 +15,7 @@ ln -s ./Documents/dotfiles/.gitignore_global .gitignore_global
 ln -s ./Documents/dotfiles/.editorconfig .editorconfig
 <br /> 
 ln -s ./Documents/dotfiles/.ctags .ctags
+<br /> 
+ln -s ./Documents/dotfiles/.flowconfig .flowconfig
+<br /> 
+ln -s ./Documents/dotfiles/libdefs.js libdefs.js

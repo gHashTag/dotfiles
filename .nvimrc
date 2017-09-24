@@ -8,6 +8,22 @@ Plug 'tpope/vim-surround'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 set completeopt+=preview
 
+Plug 'mfulz/cscope.nvim'
+" Path to store the cscope files (cscope.files and cscope.out)
+" Defaults to '~/.cscope'
+let g:cscope_dir = '~/.nvim-cscope'
+nmap <c-f> :cs find g <c-r>=expand("<cword>")<cr><cr>
+
+" Map the default keys on startup
+" These keys are prefixed by CTRL+\ <cscope param>
+" A.e.: CTRL+\ d for goto definition of word under cursor
+" Defaults to off
+let g:cscope_map_keys = 1
+
+" Update the cscope files on startup of cscope.
+" Defaults to off
+let g:cscope_update_on_start = 1
+
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 Plug 'w0rp/ale'
@@ -23,34 +39,6 @@ let g:airline_theme='badwolf'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-
-Plug 'brookhong/cscope.vim'
-" теперь файл будет подхватываться на автомате или браться из переменной среды
-if has("cscope")
-if filereadable("cscope.out")
-cs add cscope.out
-" else add database pointed to by environment
-elseif $CSCOPE_DB != ""
-cs add $CSCOPE_DB
-endif
-endif
-
-nnoremap <Leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
-nnoremap <Leader>l :call ToggleLocationList()<CR>
-
-nmap <Leader>f :cs find g <c-r>=expand("<cword>")<cr><cr>
-
-nmap <C-Space><C-Space>f \:vert :scs find g <C-R>=expand("<cword>")<CR><CR>
-
-nmap <Leader>a :cs find a <C-R>=expand("<cword>")<CR><CR> " a: Найти присвоения этому символу 
-nmap <Leader>c :cs find c <C-R>=expand("<cword>")<CR><CR> " c: Найти функции, вызывающие эту функцию 
-nmap <Leader>d :cs find d <C-R>=expand("<cword>")<CR><CR> " d: Найти функции, вызываемые этой функцией 
-nmap <Leader>e :cs find e <C-R>=expand("<cword>")<CR><CR> " e: Найдите этот рисунок egrep
-nmap <Leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR> " f: Найти этот файл
-nmap <Leader>g :cs find g <C-R>=expand("<cword>")<CR><CR> " g: Найти это определение
-nmap <Leader>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR> " i: Найти файлы # включая этот файл
-"nmap <Leader>s :cs find s <C-R>=expand("<cword>")<CR><CR> " s: Найти этот символ C
-nmap <Leader>t :cs find t <C-R>=expand("<cword>")<CR><CR> " t: Найти эту текстовую строку
 
 
 Plug 'ervandew/supertab'
@@ -74,9 +62,6 @@ let g:closetag_xhtml_filenames = '*.xhtml,*.jsx, *js'
 " This will make the list of non closing tags self closing in the specified files.
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'                               
 " Then after you press <kbd>&gt;</kbd> in these files, this plugin will try to close the current tag.
-
-" Track the engine.
-Plug 'SirVer/ultisnips'
 
 Plug 'mxw/vim-jsx' "including: pangloss/vim-javascript jelera/vim-javascript-syntax othree/yajs
 

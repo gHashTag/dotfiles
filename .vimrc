@@ -3,24 +3,10 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'tellijo/vim-react-native-snippets'
-" Use deoplete.
 Plug 'ervandew/supertab'
-Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
-let g:python3_host_prog = '/usr/local/bin/python3'
-let g:python_host_prog = '/usr/bin/python'
-
-" Track the engine.
-Plug 'SirVer/ultisnips'
-Plug 'dzhou121/gonvim'
-let g:gonvim_draw_split = 1
-let g:gonvim_draw_statusline = 1
-let g:gonvim_draw_lint = 1
 
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
-Plug 'w0rp/ale'
 Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
 Plug 'mxw/vim-jsx'
