@@ -8,7 +8,7 @@ export PATH=/usr/local/bin:$PATH
 alias n="nvim"
 alias reduxinit="npm i -S redux react-redux redux-thunk eslint-plugin-react firebase lodash prop-types react-native-fetch-blob react-native-image-picker redux-devtools-extension babel-jest babel-preset-react-native react-native-svg react-navigation react-test-renderer axios qs"
 alias rni="react-native init"
-alias ios="react-native run-ios --simulator='iPhone SE'"
+alias ios="react-native run-ios --simulator='iPhone SE"
 alias nvimrc='vim ~/Documents/dotfiles/.nvimrc'
 alias vimrc='nvim ~/Documents/dotfiles/.vimrc'
 alias zshrc='nvim ~/Documents/dotfiles/.zshrc'
