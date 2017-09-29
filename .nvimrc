@@ -93,7 +93,6 @@ function! BgToggleSol()
 endfunction
 
 nnoremap <Leader>t :call BgToggleSol()<cr>
-
 let g:solarized_termcolors=16
 colorscheme solarized
 
@@ -146,6 +145,7 @@ set shiftwidth=2                "An indent is 4 spaces
 set shiftround                  "Round indent to nearest shiftwidth multiple
 
 " Mappings
+:nnoremap <esc> :noh<return><esc> "снимает выделеные  esc
 map <C-n> :NERDTreeToggle <CR> 
 map <Leader> <Plug>(easymotion-prefix)
 map  <Leader>w <Plug>(easymotion-bd-w)
