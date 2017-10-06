@@ -4,7 +4,10 @@
 Install:
 
 brew https://brew.sh/index_ru.html
-```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
