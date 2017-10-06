@@ -10,6 +10,8 @@ brew https://brew.sh/index_ru.html
 
 `brew install watchman`
 
+`brew install yarn`
+
 `npm install -g react-native-cli`
 
 fonts https://github.com/powerline/fonts/
