@@ -18,7 +18,7 @@ mkdir .config/nvim/init.vim
 ```bash 
 set runtimepath^=~/.vim 
 runtimepath+=~/.vim/after 
-let &packpath = &runtimepath source ~/.vimrc
+let &packpath = &runtimepath source ~/.nvimrc
 ```
 
 Add links in ~/
