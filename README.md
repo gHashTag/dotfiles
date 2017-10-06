@@ -6,6 +6,8 @@ https://github.com/tomislav/osx-terminal.app-colors-solarized
 
 Clone and import Solarized Dark.terminal in preference terminal
 
+Window: column: 215; row: 60
+
 
 Install dependencies:
 
