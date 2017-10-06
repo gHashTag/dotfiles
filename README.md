@@ -1,5 +1,10 @@
 # dotfiles
 
+Solarized color theme for OS X 10.7+ Terminal.app
+
+https://github.com/tomislav/osx-terminal.app-colors-solarized
+
+Clone and import Solarized Dark.terminal in preference terminal
 
 Install:
 
