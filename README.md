@@ -19,6 +19,10 @@ brew https://brew.sh/index_ru.html
 
 iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
+`brew cask install iterm2`
+
+`sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
 `brew install node`
 
 `brew install node`
