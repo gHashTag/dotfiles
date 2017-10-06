@@ -15,11 +15,10 @@ neo vim https://github.com/neovim/neovim/wiki/Installing-Neovim
 
 mkdir .config/nvim/init.vim
 
-```set runtimepath^=~/.vim runtimepath+=~/.vim/after
-   
+```bash
+   set runtimepath^=~/.vim runtimepath+=~/.vim/after
    let &packpath = &runtimepath
-   s
-   ource ~/.vimrc```
+   source ~/.vimrc```
 
 Add links in ~/
 
