@@ -21,7 +21,6 @@ runtimepath+=~/.vim/after
 let &packpath = &runtimepath source ~/.vimrc
 ```
 
-
 Add links in ~/
 
 `ln -s  ./Documents/dotfiles/.vimrc .vimrc`
@@ -41,3 +40,17 @@ Add links in ~/
 `ln -s ./Documents/dotfiles/.flowconfig .flowconfig`
 
 `ln -s ./Documents/dotfiles/libdefs.js libdefs.js`
+
+Install Python 2 && 3
+
+`brew install python`
+
+`brew install python3`
+
+`sudo pip2 install --upgrade neovim`
+
+`pip2 install --user --upgrade neovim`
+
+`sudo pip3 install --upgrade neovim`
+
+`pip3 install --user --upgrade neovim`
