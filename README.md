@@ -6,8 +6,7 @@ Install:
 brew https://brew.sh/index_ru.html
 ```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
 
-iTerm for Mac
-`https://gist.github.com/kevin-smets/8568070`
+iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `brew install node`
 
