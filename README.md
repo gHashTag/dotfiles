@@ -68,5 +68,6 @@ Unexpected header files:
 ``` 
 
 `sudo rm /usr/local/include/python2.7/greenlet/greenlet.h`
+
 `sudo rm /usr/local/include/python3.6m/greenlet/greenlet.h`
 
