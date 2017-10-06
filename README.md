@@ -25,8 +25,6 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `brew install node`
 
-`brew install node`
-
 `brew install watchman`
 
 `brew install yarn`
