@@ -54,3 +54,19 @@ Install Python 2 && 3
 `sudo pip3 install --upgrade neovim`
 
 `pip3 install --user --upgrade neovim`
+
+`brew doctor`
+if:
+
+```Warning: Unbrewed header files were found in /usr/local/include.
+If you didn't put them there on purpose they could cause problems when
+building Homebrew formulae, and may need to be deleted.
+
+Unexpected header files:
+  /usr/local/include/python2.7/greenlet/greenlet.h
+  /usr/local/include/python3.6m/greenlet/greenlet.h
+``` 
+
+`sudo rm /usr/local/include/python2.7/greenlet/greenlet.h`
+`sudo rm /usr/local/include/python3.6m/greenlet/greenlet.h`
+
