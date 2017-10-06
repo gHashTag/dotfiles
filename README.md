@@ -27,7 +27,10 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `brew install yarn`
 
+`brew cask install graphiql`
+
 `npm install -g react-native-cli`
+
 
 fonts https://github.com/powerline/fonts/
 
