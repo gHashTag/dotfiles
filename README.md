@@ -24,7 +24,8 @@ vim plug https://github.com/junegunn/vim-plug
 
 
 neo vim https://github.com/neovim/neovim/wiki/Installing-Neovim
-```brew install neovim```
+
+`brew install neovim`
 
 mkdir .config/nvim/init.vim
 
