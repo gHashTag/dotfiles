@@ -10,10 +10,10 @@ alias reduxinit="npm i -S redux react-redux redux-thunk eslint-plugin-react fire
 alias rni="react-native init"
 #alias ios="react-native run-ios --simulator='iPhone SE'"
 alias ios="react-native run-ios --simulator='iPhone X'"
-alias nvimrc='vim ~/Documents/dotfiles/.nvimrc'
-alias vimrc='nvim ~/Documents/dotfiles/.vimrc'
-alias zshrc='nvim ~/Documents/dotfiles/.zshrc'
-alias ctags='nvim ~/Documents/dotfiles/.ctags'
+alias nvimrc='vim ~/dotfiles/.nvimrc'
+alias vimrc='nvim ~/dotfiles/.vimrc'
+alias zshrc='nvim ~/dotfiles/.zshrc'
+alias ctags='nvim ~/dotfiles/.ctags'
 alias tg='cd && cd Applications/tg && bin/telegram-cli -W'
 alias ..='cd ..'
 alias rdir='mkdir -p src/{components,actions,screens,helpers,reducers}'
@@ -106,3 +106,5 @@ prompt_context() {
 }
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

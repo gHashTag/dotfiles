@@ -9,8 +9,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 set completeopt+=preview
 
 Plug 'mfulz/cscope.nvim'
-" Path to store the cscope files (cscope.files and cscope.out)
-" Defaults to '~/.cscope'
+" Path to store the cscope files (cscope.files and cscope.out) Defaults to '~/.cscope'
 let g:cscope_dir = '~/.nvim-cscope'
 nmap <c-f> :cs find g <c-r>=expand("<cword>")<cr><cr>
 
