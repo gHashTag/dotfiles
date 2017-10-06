@@ -100,3 +100,7 @@ Unexpected header files:
 
 `sudo rm /usr/local/include/python3.6m/greenlet/greenlet.h`
 
+
+Install react-native-debugger https://github.com/jhen0409/react-native-debugger
+
+`brew update && brew cask install react-native-debugger`
