@@ -1,5 +1,6 @@
 # dotfiles
 Install:
+
 brew https://brew.sh/index_ru.html
 ```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
 
@@ -11,6 +12,12 @@ vim plug https://github.com/junegunn/vim-plug
 
 neo vim https://github.com/neovim/neovim/wiki/Installing-Neovim
 ```brew install neovim```
+
+mkdir .config/nvim/init.vim
+
+```set runtimepath^=~/.vim runtimepath+=~/.vim/after
+   let &packpath = &runtimepath
+   source ~/.vimrc```
 
 Add links in ~/
 
