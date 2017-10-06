@@ -69,6 +69,8 @@ Add links in ~/
 
 `ln -s ./dotfiles/.gitignore .gitignore`
 
+`ln -s ./dotfiles/.gitconfig .gitconfig`
+
 `ln -s ./dotfiles/.gitignore_global .gitignore_global`
 
 `ln -s ./dotfiles/.editorconfig .editorconfig`
