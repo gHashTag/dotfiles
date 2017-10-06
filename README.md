@@ -26,18 +26,18 @@ Add links in ~/
 
 `ln -s  ./Documents/dotfiles/.vimrc .vimrc`
 
-ln -s ./Documents/dotfiles/.nvimrc .nvimrc
+`ln -s ./Documents/dotfiles/.nvimrc .nvimrc`
 
-ln -s ./Documents/dotfiles/.zshrc .zshrc
+`ln -s ./Documents/dotfiles/.zshrc .zshrc`
 
-ln -s ./Documents/dotfiles/.gitignore .gitignore
+`ln -s ./Documents/dotfiles/.gitignore .gitignore`
 
-ln -s ./Documents/dotfiles/.gitignore_global .gitignore_global
+`ln -s ./Documents/dotfiles/.gitignore_global .gitignore_global`
 
-ln -s ./Documents/dotfiles/.editorconfig .editorconfig
+`ln -s ./Documents/dotfiles/.editorconfig .editorconfig`
 
-ln -s ./Documents/dotfiles/.ctags .ctags
+`ln -s ./Documents/dotfiles/.ctags .ctags`
 
-ln -s ./Documents/dotfiles/.flowconfig .flowconfig
+`ln -s ./Documents/dotfiles/.flowconfig .flowconfig`
 
-ln -s ./Documents/dotfiles/libdefs.js libdefs.js
+`ln -s ./Documents/dotfiles/libdefs.js libdefs.js`
