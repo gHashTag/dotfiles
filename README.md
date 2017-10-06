@@ -6,7 +6,8 @@ https://github.com/tomislav/osx-terminal.app-colors-solarized
 
 Clone and import Solarized Dark.terminal in preference terminal
 
-Install:
+
+Install dependencies:
 
 brew https://brew.sh/index_ru.html
 
