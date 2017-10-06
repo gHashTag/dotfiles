@@ -111,3 +111,5 @@ Unexpected header files:
 Install react-native-debugger https://github.com/jhen0409/react-native-debugger
 
 `brew update && brew cask install react-native-debugger`
+
+Telegram https://macos.telegram.org
