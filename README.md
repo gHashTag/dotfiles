@@ -59,23 +59,23 @@ let &packpath = &runtimepath source ~/.nvimrc
 
 Add links in ~/
 
-`ln -s  ./Documents/dotfiles/.vimrc .vimrc`
+`ln -s  ./dotfiles/.vimrc .vimrc`
 
-`ln -s ./Documents/dotfiles/.nvimrc .nvimrc`
+`ln -s ./dotfiles/.nvimrc .nvimrc`
 
-`ln -s ./Documents/dotfiles/.zshrc .zshrc`
+`ln -s ./dotfiles/.zshrc .zshrc`
 
-`ln -s ./Documents/dotfiles/.gitignore .gitignore`
+`ln -s ./dotfiles/.gitignore .gitignore`
 
-`ln -s ./Documents/dotfiles/.gitignore_global .gitignore_global`
+`ln -s ./dotfiles/.gitignore_global .gitignore_global`
 
-`ln -s ./Documents/dotfiles/.editorconfig .editorconfig`
+`ln -s ./dotfiles/.editorconfig .editorconfig`
 
-`ln -s ./Documents/dotfiles/.ctags .ctags`
+`ln -s ./dotfiles/.ctags .ctags`
 
-`ln -s ./Documents/dotfiles/.flowconfig .flowconfig`
+`ln -s ./dotfiles/.flowconfig .flowconfig`
 
-`ln -s ./Documents/dotfiles/libdefs.js libdefs.js`
+`ln -s ./dotfiles/libdefs.js libdefs.js`
 
 Install Python 2 && 3
 
