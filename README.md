@@ -27,6 +27,8 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `brew install yarn`
 
+`npm install rnpm -g`
+
 `brew cask install graphiql`
 
 `npm install -g react-native-cli`
