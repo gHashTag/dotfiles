@@ -26,6 +26,14 @@ let g:cscope_update_on_start = 1
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 Plug 'w0rp/ale'
+  let g:ale_fixers = {
+  \   'javascript': [
+  \       'DoSomething',
+  \       'eslint',
+  \       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
+  \   ],
+  \}
+
 Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
 Plug 'mxw/vim-jsx'
@@ -63,7 +71,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 " Then after you press <kbd>&gt;</kbd> in these files, this plugin will try to close the current tag.
 
 Plug 'mxw/vim-jsx' "including: pangloss/vim-javascript jelera/vim-javascript-syntax othree/yajs
-
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files"
 
 " Ctrl P
 Plug 'kien/ctrlp.vim'
