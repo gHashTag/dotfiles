@@ -35,6 +35,10 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `npm install -g react-native-cli`
 
+`npm install -g eslint`
+
+`npm install -g eslint-plugin-react`
+
 `sudo gem install cocoapods`
 
 
