@@ -43,6 +43,8 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `brew cask install android-studio`
 
+`brew cask install java`
+
 
 fonts https://github.com/powerline/fonts/
 
