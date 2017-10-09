@@ -45,6 +45,8 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `brew cask install java`
 
+`brew cask install bluestacks`
+
 
 fonts https://github.com/powerline/fonts/
 
