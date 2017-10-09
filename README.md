@@ -41,6 +41,8 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `sudo gem install cocoapods`
 
+`brew cask install android-studio`
+
 
 fonts https://github.com/powerline/fonts/
 
