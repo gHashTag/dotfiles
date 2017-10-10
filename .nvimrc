@@ -24,6 +24,7 @@ let g:cscope_map_keys = 1
 let g:cscope_update_on_start = 1
 
 " Snippets are separated from the engine. Add this if you want them:
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'w0rp/ale'
   let g:ale_fixers = {
@@ -54,7 +55,7 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 
-Plug 'tellijo/vim-react-native-snippets'
+Plug 'letientai299/vim-react-snippets', { 'branch': 'es6'  }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 let g:deoplete#enable_at_startup = 1
 
