@@ -51,6 +51,8 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `brew cask install bluestacks`
 
+`npm install -g code-push-cli`
+
 
 fonts https://github.com/powerline/fonts/
 
