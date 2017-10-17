@@ -26,6 +26,7 @@ let g:cscope_update_on_start = 1
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+
 Plug 'w0rp/ale'
   let g:ale_fixers = {
   \   'javascript': [
