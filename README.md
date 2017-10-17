@@ -93,6 +93,8 @@ Add links in ~/
 
 `ln -s ./dotfiles/.ctags .ctags`
 
+`ln -s ./dotfiles/.eslint .eslint`
+
 `ln -s ./dotfiles/.flowconfig .flowconfig`
 
 `ln -s ./dotfiles/libdefs.js libdefs.js`
