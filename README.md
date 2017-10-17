@@ -93,7 +93,7 @@ Add links in ~/
 
 `ln -s ./dotfiles/.ctags .ctags`
 
-`ln -s ./dotfiles/.eslint .eslint`
+`ln -s ./dotfiles/.eslintrc .eslintrc`
 
 `ln -s ./dotfiles/.flowconfig .flowconfig`
 
