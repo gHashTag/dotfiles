@@ -35,9 +35,9 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `npm install -g react-native-cli`
 
-`npm install -g eslint`
-
 `npm install -g eslint-plugin-react`
+
+`yarn add eslint@3.x babel-eslint@7`
 
 `npm install -g gitbook-cli`
 
