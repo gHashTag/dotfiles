@@ -62,6 +62,11 @@ vim plug https://github.com/junegunn/vim-plug
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
+`brew tap caskroom/fonts`
+
+`brew cask install font-hack-nerd-font`
+
+select 11.5 Droid Sans Mono Nerd Complete
 
 neo vim https://github.com/neovim/neovim/wiki/Installing-Neovim
 

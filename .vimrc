@@ -72,5 +72,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:UltiSnipsExpandTrigger="<C-l>"
 let g:UltiSnipsEditSplit="vertical"
 
+
 " Makros
 let @a='%s/;//g' "заменить ; на удалить

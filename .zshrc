@@ -10,11 +10,12 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 alias n="nvim"
+alias rnm="rm -rf node_modules && npm install"
 alias reduxinit="npm i -S redux react-redux redux-thunk eslint-plugin-react firebase lodash prop-types react-native-fetch-blob react-native-image-picker redux-devtools-extension babel-jest babel-preset-react-native react-native-svg react-navigation react-test-renderer axios qs"
 alias rni="react-native init"
 alias ios="react-native run-ios --simulator='iPhone SE'"
 alias and="react-native run-android"
-alias s="yarn start"
+alias s="npm start -- --reset-cache"
 #alias ios="react-native run-ios --simulator='iPhone X'"
 alias nvimrc='vim ~/dotfiles/.nvimrc'
 alias vimrc='nvim ~/dotfiles/.vimrc'

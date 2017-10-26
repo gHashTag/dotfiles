@@ -76,8 +76,8 @@ Plug 'mxw/vim-jsx' "including: pangloss/vim-javascript jelera/vim-javascript-syn
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files"
 
 " Ctrl P
-Plug 'kien/ctrlp.vim'
-set wildignore+=*/tmp/*,*/node_modules/*,*/android/*,app.json,yarn.lock,package.json,package-lock.json,*/__tests__/*,*.so,*.swp,*.zip
+" Plug 'kien/ctrlp.vim'
+" set wildignore+=*/tmp/*,*/node_modules/*,*/android/*,app.json,yarn.lock,package.json,package-lock.json,*/__tests__/*,*.so,*.swp,*.zip
 
 Plug 'flowtype/vim-flow'
 Plug 'majutsushi/tagbar'
@@ -85,6 +85,7 @@ Plug 'elzr/vim-json'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ap/vim-css-color'
 Plug 'flazz/vim-colorschemes'
+Plug 'ryanoasis/vim-devicons'
 
 " Initialize plugin system
 
@@ -153,6 +154,7 @@ set softtabstop=2               "Insert 4 spaces when tab is pressed
 set shiftwidth=2                "An indent is 4 spaces
 set shiftround                  "Round indent to nearest shiftwidth multiple
 
+
 " Mappings
 :nnoremap <esc> :noh<return><esc> "снимает выделеные  esc
 map <C-n> :NERDTreeToggle <CR> 
@@ -175,6 +177,10 @@ filetype plugin on
 " Airline change buffer
 nnoremap <silent> <Tab>[ :bp <cr>
 nnoremap <silent> <Tab>] :bn <cr>
+
+" vim-devicons
+set encoding=utf8
+let g:airline_powerline_fonts = 1
 
 " Caps close and quit
 :ca WQ wq
