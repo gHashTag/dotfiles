@@ -3,6 +3,10 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
 
 " Use deoplete.
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -11,7 +15,7 @@ set completeopt+=preview
 Plug 'mfulz/cscope.nvim'
 " Path to store the cscope files (cscope.files and cscope.out) Defaults to '~/.cscope'
 let g:cscope_dir = '~/.nvim-cscope'
-nmap <c-f> :cs find g <c-r>=expand("<cword>")<cr><cr>
+nmap <c-r> :cs find g <c-r>=expand("<cword>")<cr><cr>
 
 " Map the default keys on startup
 " These keys are prefixed by CTRL+\ <cscope param>
@@ -191,6 +195,8 @@ let g:airline_powerline_fonts = 1
 " Ctrl-p
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_switch_buffer = 'Et'
+
+
 " Makros
 let @a='%s/;//g' "заменить ; на удалить
 
