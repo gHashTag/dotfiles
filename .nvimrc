@@ -15,7 +15,7 @@ set completeopt+=preview
 Plug 'mfulz/cscope.nvim'
 " Path to store the cscope files (cscope.files and cscope.out) Defaults to '~/.cscope'
 let g:cscope_dir = '~/.nvim-cscope'
-nmap <c-r> :cs find g <c-r>=expand("<cword>")<cr><cr>
+nmap <c-y> :cs find g <c-r>=expand("<cword>")<cr><cr>
 
 " Map the default keys on startup
 " These keys are prefixed by CTRL+\ <cscope param>
@@ -35,7 +35,7 @@ Plug 'w0rp/ale'
   let g:ale_fixers = {
   \   'javascript': [
   \       'DoSomething',
-  \       'eslint',
+  \       'eslint-babel',
   \       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
   \   ],
   \}
@@ -44,6 +44,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
 Plug 'mxw/vim-jsx'
 Plug 'kern/vim-es7'
+Plug 'metakirby5/codi.vim'
 
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
