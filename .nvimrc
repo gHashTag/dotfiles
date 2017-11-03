@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
+Plug 'jparise/vim-graphql'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
@@ -35,7 +36,7 @@ Plug 'w0rp/ale'
   let g:ale_fixers = {
   \   'javascript': [
   \       'DoSomething',
-  \       'eslint-babel',
+  \       'babel-eslint',
   \       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
   \   ],
   \}
