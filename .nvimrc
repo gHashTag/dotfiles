@@ -5,9 +5,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'jparise/vim-graphql'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
+"let g:NERDTreeFileExtensionHighlightFullName = 1
+"let g:NERDTreeExactMatchHighlightFullName = 1
+"let g:NERDTreePatternMatchHighlightFullName = 1
 
 " Use deoplete.
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

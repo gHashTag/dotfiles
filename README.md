@@ -31,6 +31,8 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `npm install rnpm -g`
 
+`npm install -g mongo-hacker`
+
 `brew cask install graphiql`
 
 `npm install -g react-native-cli`
