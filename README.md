@@ -43,6 +43,8 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `npm install -g gitbook-cli`
 
+`brew install antigen`
+
 `sudo gem install cocoapods`
 
 `brew cask install android-studio`
