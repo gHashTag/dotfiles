@@ -1,18 +1,54 @@
 #If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 DEFAULT_USER="$USER"
+bindkey -v
+bindkey jj vi-cmd-mode
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export PATH=/usr/local/bin:$PATH
-
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export KEYTIMEOUT=15
+autoload -Uz surround
+zle -N delete-surround surround
+zle -N add-surround surround
+zle -N change-surround surround
+bindkey -a cs change-surround
+bindkey -a ds delete-surround
+bindkey -a ys add-surround
+bindkey -M visual S add-surround
+
+# sets up vimmish text-objects in zsh
+autoload -U is-at-least
+if is-at-least 5.0.8; then
+    autoload -U select-quoted; zle -N select-quoted
+    for m in visual viopp; do
+        for c in {a,i}{\',\",\`}; do
+            bindkey -M $m $c select-quoted
+        done
+    done
+    autoload -U select-bracketed; zle -N select-bracketed
+    for m in visual viopp; do
+        for c in {a,i}${(s..)^:-'()[]{}<>bB'}; do
+            bindkey -M $m $c select-bracketed
+        done
+    done
+  fi
+
+source /usr/local/share/antigen/antigen.zsh
+
+antigen use oh-my-zsh
+antigen use hlissner/zsh-autopair
+
+antigen apply
 
 alias n="nvim"
 alias rnm="rm -rf node_modules && npm install"
 alias es6="yarn add -D babel-cli babel-plugin-transform-object-rest-spread babel-preset-env"
 
+plugins=(zsh-autopair react-native vi-mode git npm node heroku yarn)
 
 alias reduxinit="npm i -S redux react-redux redux-thunk eslint-plugin-react firebase lodash prop-types react-native-fetch-blob react-native-image-picker redux-devtools-extension babel-jest babel-preset-react-native react-native-svg react-navigation react-test-renderer axios qs"
 alias rni="react-native init"
@@ -31,43 +67,16 @@ alias rdir='mkdir -p src/{components,actions,screens,helpers,reducers}'
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="agnoster"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="agnoster"
+#ZSH_THEME="dogenpunk"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+COMPLETION_WAITING_DOTS="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -76,7 +85,6 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm node heroku yarn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,6 +123,15 @@ prompt_context() {
   fi
 }
 
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/[NORMAL]}/(main|viins)/[INSERT]}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
