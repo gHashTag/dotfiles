@@ -37,12 +37,12 @@ if is-at-least 5.0.8; then
     done
   fi
 
-source /usr/local/share/antigen/antigen.zsh
+#source /usr/local/share/antigen/antigen.zsh
 
-antigen use oh-my-zsh
-antigen use hlissner/zsh-autopair
+#antigen use oh-my-zsh
+#antigen use hlissner/zsh-autopair
 
-antigen apply
+#antigen apply
 
 alias n="nvim"
 alias rnm="rm -rf node_modules && npm install"
