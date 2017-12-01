@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "eslint-config-equimper": "^2.2.1",
+    "eslint-config-prettier": "^2.9.0"
+  }
+}

@@ -1,23 +1,20 @@
 {
-    "parser": "babel-eslint",
-    "plugins": [
-        "react"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 7,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "extends": ["eslint:all", "plugin:react/all"],
-    "rules": {
-      "strict": 0,
-      "react/jsx-uses-react": "error",
-      "react/jsx-uses-vars": "error",
-      "indent": ["error", 2],
-      "linebreak-style": [ "error", "unix" ],
-      "quotes": [ "error", "single" ],
-      "semi": [ "error", "never" ],
-    }
+  "extends": [
+    "equimper",
+    "prettier/react"
+  ],
+  "rules":  {
+    "strict": 0,
+    "arrow-body-style": 0, 
+    "spaced-comment": 0,
+    "no-unused-expressions": ["error", { "allowTernary": true }],
+    "no-console": 0,
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "indent": ["error", 2],
+    "linebreak-style": [ "error", "unix" ],
+    "quotes": [ "error", "single" ],
+    "semi": [ "error", "never" ],
+    "comma-dangle": ["error", "never"]
+  }
 }

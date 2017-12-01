@@ -33,6 +33,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 Plug 'w0rp/ale'
+  let g:ale_linters = {'jsx': ['eslint']}
   let g:ale_fixers = {
   \   'javascript': [
   \       'DoSomething',
@@ -40,7 +41,10 @@ Plug 'w0rp/ale'
   \       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
   \   ],
   \}
-
+augroup FiletypeGroup
+    autocmd!
+    au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+  augroup END
 Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
 Plug 'mxw/vim-jsx'
