@@ -6,7 +6,9 @@
   "rules":  {
     "strict": 0,
     "arrow-body-style": 0, 
+    "camelcase": 0,
     "spaced-comment": 0,
+    "max-len": 0,
     "no-unused-expressions": ["error", { "allowTernary": true }],
     "no-console": 0,
     "react/jsx-uses-react": "error",

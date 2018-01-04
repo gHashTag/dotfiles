@@ -5,9 +5,33 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 Plug 'jparise/vim-graphql'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-"let g:NERDTreeFileExtensionHighlightFullName = 1
-"let g:NERDTreeExactMatchHighlightFullName = 1
-"let g:NERDTreePatternMatchHighlightFullName = 1
+Plug 'altercation/vim-colors-solarized'
+Plug 'easymotion/vim-easymotion'
+Plug 'mxw/vim-jsx'
+Plug 'kern/vim-es7'
+Plug 'metakirby5/codi.vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'letientai299/vim-react-snippets', { 'branch': 'es6'  }
+Plug 'bling/vim-airline'
+Plug 'flowtype/vim-flow'
+Plug 'majutsushi/tagbar'
+Plug 'elzr/vim-json'
+Plug 'scrooloose/nerdcommenter'
+Plug 'ap/vim-css-color'
+Plug 'flazz/vim-colorschemes'
+Plug 'ryanoasis/vim-devicons'
+Plug 'othree/yajs.vim'
+Plug 'herringtondarkholme/yats.vim'
+
+Plug 'ervandew/supertab'
+let g:SuperTabDefaultCompletionType = "<c-n>"
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='badwolf'
 
 " Use deoplete.
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -23,14 +47,9 @@ nmap <c-y> :cs find g <c-r>=expand("<cword>")<cr><cr>
 " A.e.: CTRL+\ d for goto definition of word under cursor
 " Defaults to off
 let g:cscope_map_keys = 1
-
 " Update the cscope files on startup of cscope.
 " Defaults to off
 let g:cscope_update_on_start = 1
-
-" Snippets are separated from the engine. Add this if you want them:
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 
 Plug 'w0rp/ale'
   let g:ale_linters = {'jsx': ['eslint']}
@@ -45,28 +64,8 @@ augroup FiletypeGroup
     autocmd!
     au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
   augroup END
-Plug 'altercation/vim-colors-solarized'
-Plug 'easymotion/vim-easymotion'
-Plug 'mxw/vim-jsx'
-Plug 'kern/vim-es7'
-Plug 'metakirby5/codi.vim'
-
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='badwolf'
 "let g:airline_solarized_bg='dark'
 
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-
-
-Plug 'ervandew/supertab'
-let g:SuperTabDefaultCompletionType = "<c-n>"
-
-Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-
-Plug 'letientai299/vim-react-snippets', { 'branch': 'es6'  }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 let g:deoplete#enable_at_startup = 1
 
@@ -89,14 +88,6 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files"
 " Plug 'kien/ctrlp.vim'
 " set wildignore+=*/tmp/*,*/node_modules/*,*/android/*,app.json,yarn.lock,package.json,package-lock.json,*/__tests__/*,*.so,*.swp,*.zip
 
-Plug 'flowtype/vim-flow'
-Plug 'majutsushi/tagbar'
-Plug 'elzr/vim-json'
-Plug 'scrooloose/nerdcommenter'
-Plug 'ap/vim-css-color'
-Plug 'flazz/vim-colorschemes'
-Plug 'ryanoasis/vim-devicons'
-
 " Initialize plugin system
 
 call plug#end()
@@ -112,7 +103,7 @@ function! BgToggleSol()
   endif
 endfunction
 
-nnoremap <Leader>t :call BgToggleSol()<cr>
+nnoremap <Leader>g :call BgToggleSol()<cr>
 let g:solarized_termcolors=16
 colorscheme solarized
 

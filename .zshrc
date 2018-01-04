@@ -45,6 +45,7 @@ if is-at-least 5.0.8; then
 #antigen apply
 
 alias n="nvim"
+alias gcool="graphcool"
 alias rnm="rm -rf node_modules && npm install"
 alias es6="yarn add -D babel-cli babel-plugin-transform-object-rest-spread babel-preset-env"
 
