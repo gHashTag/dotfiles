@@ -31,7 +31,7 @@ Plug 'herringtondarkholme/yats.vim'
 Plug 'ervandew/supertab'
 let g:SuperTabDefaultCompletionType = "<c-n>"
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='badwolf'
+"let g:airline_theme='badwolf'
 
 " Use deoplete.
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
