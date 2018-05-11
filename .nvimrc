@@ -27,11 +27,12 @@ Plug 'flazz/vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'othree/yajs.vim'
 Plug 'herringtondarkholme/yats.vim'
-
 Plug 'ervandew/supertab'
+Plug 'mboughaba/i3config.vim'
+set ft=i3config
 let g:SuperTabDefaultCompletionType = "<c-n>"
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='badwolf'
+let g:airline_theme='powerlineish'
 
 " Use deoplete.
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }

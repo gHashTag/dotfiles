@@ -44,7 +44,7 @@ if is-at-least 5.0.8; then
 
 #antigen apply
 
-alias n="nvim"
+alias neo="nvim"
 alias gcool="graphcool"
 alias rnm="rm -rf node_modules && npm install"
 alias es6="yarn add -D babel-cli babel-plugin-transform-object-rest-spread babel-preset-env"
@@ -133,6 +133,3 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
