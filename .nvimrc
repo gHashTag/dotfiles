@@ -148,7 +148,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 " Settings
-set number
+"set number
 set tabstop=2                   "A tab is 8 spaces
 set expandtab                   "Always uses spaces instead of tabs
 set softtabstop=2               "Insert 4 spaces when tab is pressed
