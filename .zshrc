@@ -10,6 +10,8 @@ export PATH=/usr/local/bin:$PATH
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export NODE_ENV=development
+export BABEL_ENV=$NODE_ENV
 export KEYTIMEOUT=15
 autoload -Uz surround
 zle -N delete-surround surround
@@ -135,6 +137,7 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+<<<<<<< HEAD
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -142,3 +145,5 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+=======
+>>>>>>> e9946e1edf9b0da242224c3cb18de21fad90a326
