@@ -10,15 +10,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mxw/vim-jsx'
 Plug 'kern/vim-es7'
 Plug 'metakirby5/codi.vim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'letientai299/vim-react-snippets', { 'branch': 'es6'  }
 Plug 'bling/vim-airline'
-Plug 'flowtype/vim-flow'
 Plug 'majutsushi/tagbar'
 Plug 'elzr/vim-json'
 Plug 'scrooloose/nerdcommenter'
@@ -28,15 +24,56 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'othree/yajs.vim'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'ervandew/supertab'
+Plug 'wokalski/autocomplete-flow'
+Plug 'flowtype/flow-language-server'
+let g:LanguageClient_serverCommands = {
+    \ 'javascript': ['flow-language-server', '--stdio'],
+    \ }
 Plug 'mboughaba/i3config.vim'
 set ft=i3config
-let g:SuperTabDefaultCompletionType = "<c-n>"
+
+
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='powerlineish'
 
 " Use deoplete.
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-set completeopt+=preview
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+let g:neosnippet#disable_runtime_snippets = { '_' : 1 }
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/dotfiles/snippets'
+
+
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
 
 Plug 'mfulz/cscope.nvim'
 " Path to store the cscope files (cscope.files and cscope.out) Defaults to '~/.cscope'
@@ -53,14 +90,21 @@ let g:cscope_map_keys = 1
 let g:cscope_update_on_start = 1
 
 Plug 'w0rp/ale'
-  let g:ale_linters = {'jsx': ['eslint']}
-  let g:ale_fixers = {
-  \   'javascript': [
-  \       'DoSomething',
-  \       'babel-eslint',
-  \       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
-  \   ],
-  \}
+" Asynchronous Lint Engine (ALE)
+let g:ale_linters = {'jsx': ['eslint', 'flow']}
+let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_fix_on_save = 1
+" Enable completion where available.
+let g:ale_completion_enabled = 1
+" %linter% is the name of the linter that provided the message
+" %s is the error or warning message
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" Map keys to navigate between lines with errors and warnings.
+nnoremap <leader>an :ALENextWrap<cr>
+nnoremap <leader>ap :ALEPreviousWrap<cr>
+
 augroup FiletypeGroup
     autocmd!
     au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
@@ -68,9 +112,6 @@ augroup FiletypeGroup
 "let g:airline_solarized_bg='dark'
 
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
-let g:deoplete#enable_at_startup = 1
-
-
 Plug 'alvan/vim-closetag'                                                         
 let g:closetag_close_shortcut = '<leader>>'                                       
 " Add > at current position without closing the current tag, default is '<leader>>'                                                                      
@@ -149,7 +190,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 " Settings
-"set number
+set number
 set tabstop=2                   "A tab is 8 spaces
 set expandtab                   "Always uses spaces instead of tabs
 set softtabstop=2               "Insert 4 spaces when tab is pressed
@@ -162,13 +203,20 @@ set shiftround                  "Round indent to nearest shiftwidth multiple
 map <C-n> :NERDTreeToggle <CR> 
 map <Leader> <Plug>(easymotion-prefix)
 map  <Leader>w <Plug>(easymotion-bd-w)
-:imap jj <Esc>
+:imap jk <Esc>
 :imap оо <Esc> 
 nmap <C-\> :TagbarToggle<CR>
 set pastetoggle=<C-j>
 " Trigger configuration React Snippets
 let g:UltiSnipsExpandTrigger="<C-l>"
-"let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsEditSplit="vertical"
+
+" Plugin key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
 " Tagbar
 let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 nmap <Leader>a :TagbarToggle<CR>

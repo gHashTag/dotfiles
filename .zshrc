@@ -57,10 +57,10 @@ plugins=(zsh-autopair react-native vi-mode git npm node heroku yarn)
 alias reduxinit="npm i -S redux react-redux redux-thunk eslint-plugin-react firebase lodash prop-types react-native-fetch-blob react-native-image-picker redux-devtools-extension babel-jest babel-preset-react-native react-native-svg react-navigation react-test-renderer axios qs"
 alias rni="react-native init"
 alias ios="react-native run-ios --simulator='iPhone SE'"
+alias iosx="react-native run-ios --simulator='iPhone X'"
 alias and="react-native run-android"
 alias emu="/Users/xyz/Library/Android/sdk/tools/emulator -avd Nexus_6P_API_23"
 alias s="npm start -- --reset-cache"
-#alias ios="react-native run-ios --simulator='iPhone X'"
 alias nvimrc='vim ~/dotfiles/.nvimrc'
 alias vimrc='nvim ~/dotfiles/.vimrc'
 alias zshrc='nvim ~/dotfiles/.zshrc'
@@ -137,7 +137,6 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-<<<<<<< HEAD
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -145,5 +144,3 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-=======
->>>>>>> e9946e1edf9b0da242224c3cb18de21fad90a326

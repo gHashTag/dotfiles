@@ -2,11 +2,9 @@ call plug#begin('~/.config/nvim/plugged')
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jiangmiao/auto-pairs'
-Plug 'tellijo/vim-react-native-snippets'
 Plug 'ervandew/supertab'
 
 " Snippets are separated from the engine. Add this if you want them:
-Plug 'honza/vim-snippets'
 Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
 Plug 'mxw/vim-jsx'
@@ -51,6 +49,7 @@ set shiftround                  "Round indent to nearest shiftwidth multiple
 map <C-n> :NERDTreeToggle <CR> 
 map <Leader> <Plug>(easymotion-prefix)
 map  <Leader>w <Plug>(easymotion-bd-w)
+:imap jk <Esc>
 :imap jj <Esc>
 :imap оо <Esc> 
 nmap <C-t> :TagbarToggle<CR>
