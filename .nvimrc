@@ -14,6 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
 Plug 'elzr/vim-json'
@@ -21,7 +22,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ap/vim-css-color'
 Plug 'flazz/vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
-Plug 'othree/yajs.vim'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'ervandew/supertab'
 Plug 'wokalski/autocomplete-flow'
@@ -95,11 +95,11 @@ let g:ale_linters = {'jsx': ['eslint', 'flow']}
 let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_fix_on_save = 1
 " Enable completion where available.
-let g:ale_completion_enabled = 1
+" let g:ale_completion_enabled = 1
 " %linter% is the name of the linter that provided the message
 " %s is the error or warning message
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_error_str = 'Error'
+let g:ale_echo_msg_warning_str = 'Warn'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 " Map keys to navigate between lines with errors and warnings.
 nnoremap <leader>an :ALENextWrap<cr>
