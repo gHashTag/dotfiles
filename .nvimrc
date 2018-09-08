@@ -145,7 +145,7 @@ function! BgToggleSol()
   endif
 endfunction
 
-nnoremap <Leader>g :call BgToggleSol()<cr>
+nnoremap <Leader>i :call BgToggleSol()<cr>
 let g:solarized_termcolors=16
 colorscheme solarized
 

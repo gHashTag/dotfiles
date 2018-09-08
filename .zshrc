@@ -48,7 +48,6 @@ if is-at-least 5.0.8; then
 
 alias n="nvim"
 alias playra="ssh 'playra@194.58.104.187'"
-alias gcool="graphcool"
 alias rnm="rm -rf node_modules && npm install"
 alias es6="yarn add -D babel-cli babel-plugin-transform-object-rest-spread babel-preset-env"
 
