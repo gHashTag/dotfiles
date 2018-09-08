@@ -144,3 +144,7 @@ Install react-native-debugger https://github.com/jhen0409/react-native-debugger
 Telegram:
 
 `brew cask install telegram`
+
+iTerm2
+Config iTerm2 to Open New Tab with Same Directory
+https://medium.com/@blacksource/new-tab-iterm2-with-in-current-directory-627b0c31734a
