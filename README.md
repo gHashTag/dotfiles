@@ -49,11 +49,7 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `brew install gifify`
 
-`brew cask install bluestacks`
-
 `npm install -g nodemon`
-
-`npm install -g code-push-cli`
 
 
 fonts https://github.com/powerline/fonts/
