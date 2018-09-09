@@ -29,8 +29,6 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `brew install yarn`
 
-`npm install rnpm -g`
-
 `npm install -g mongo-hacker`
 
 `brew cask install graphiql`
@@ -38,8 +36,6 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 `npm install -g react-native-cli`
 
 `npm install -g eslint-plugin-react`
-
-`yarn add eslint@3.x babel-eslint@7`
 
 `npm install -g gitbook-cli`
 
@@ -148,3 +144,7 @@ Install react-native-debugger https://github.com/jhen0409/react-native-debugger
 Telegram:
 
 `brew cask install telegram`
+
+iTerm2
+Config iTerm2 to Open New Tab with Same Directory
+https://medium.com/@blacksource/new-tab-iterm2-with-in-current-directory-627b0c31734a
