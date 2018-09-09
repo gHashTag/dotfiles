@@ -94,6 +94,9 @@ Plug 'w0rp/ale'
 let g:ale_linters = {'jsx': ['eslint', 'flow']}
 let b:ale_fixers = ['prettier', 'eslint']
 let g:ale_fix_on_save = 1
+
+lang en_US.UTF-8
+
 " Enable completion where available.
 " let g:ale_completion_enabled = 1
 " %linter% is the name of the linter that provided the message
