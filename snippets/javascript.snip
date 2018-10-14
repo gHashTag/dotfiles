@@ -1,5 +1,4 @@
 snippet rpc
-  'use strict'
   import React, { PureComponent } from 'react'
   import {  } from 'react-native'
 
@@ -15,13 +14,11 @@ snippet rpc
 	export default $1
 
 snippet rfc
-  'use strict'
   import React from 'react'
   import { StyleSheet, View } from 'react-native'
 
 	const ${1:function_name} = ({${2}}) => {
     const { container } = styles
-    const { $2 } = this.props
     return (
       <View style={container}>${0:${VISUAL}}
       </View>

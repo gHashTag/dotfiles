@@ -2,14 +2,15 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 DEFAULT_USER="$USER"
 bindkey -v
-bindkey jj vi-cmd-mode
+bindkey jk vi-cmd-mode
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export PATH=/usr/local/bin:$PATH
+export ANDROID_SDK=$HOME/Library/Android/sdk
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
+export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$PATH
 export NODE_ENV=development
 export BABEL_ENV=$NODE_ENV
 export KEYTIMEOUT=15
@@ -54,10 +55,10 @@ plugins=(zsh-autopair react-native vi-mode git npm node heroku yarn)
 
 alias reduxinit="npm i -S redux react-redux redux-thunk eslint-plugin-react firebase lodash prop-types react-native-fetch-blob react-native-image-picker redux-devtools-extension babel-jest babel-preset-react-native react-native-svg react-navigation react-test-renderer axios qs"
 alias rni="react-native init"
-alias ios="react-native run-ios --simulator='iPhone SE'"
+alias ios="react-native run-ios --simulator='iPhone 5s'"
 alias iosx="react-native run-ios --simulator='iPhone X'"
 alias and="react-native run-android"
-alias emu="/Users/xyz/Library/Android/sdk/tools/emulator -avd Nexus_6P_API_23"
+alias emu="emulator @Pixel_XL_API_23"
 alias s="npm start -- --reset-cache"
 alias nvimrc='vim ~/dotfiles/.nvimrc'
 alias vimrc='nvim ~/dotfiles/.vimrc'
