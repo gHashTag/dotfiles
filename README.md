@@ -8,6 +8,10 @@ https://github.com/tomislav/osx-terminal.app-colors-solarized
 
 Clone and import Solarized Dark.terminal in preference terminal
 
+Тема powerlevel9k
+
+`git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k`
+
 Window: column: 215; row: 60
 
 
