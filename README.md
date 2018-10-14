@@ -41,6 +41,8 @@ iTerm for Mac https://gist.github.com/kevin-smets/8568070
 
 `brew install antigen`
 
+`brew install wget`
+
 `sudo gem install cocoapods`
 
 `brew cask install android-studio`
