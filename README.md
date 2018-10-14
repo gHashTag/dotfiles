@@ -8,6 +8,10 @@ https://github.com/tomislav/osx-terminal.app-colors-solarized
 
 Clone and import Solarized Dark.terminal in preference terminal
 
+OhMyZsh!
+
+`curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh`
+
 Тема powerlevel9k
 
 `git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k`
