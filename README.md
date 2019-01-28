@@ -140,7 +140,7 @@ Unexpected header files:
 
 `sudo rm /usr/local/include/python2.7/greenlet/greenlet.h`
 
-`sudo rm /usr/local/include/python3.6m/greenlet/greenlet.h`
+`sudo rm /usr/local/include/python3.7m/greenlet/greenlet.h`
 
 
 Install react-native-debugger https://github.com/jhen0409/react-native-debugger
