@@ -47,6 +47,7 @@ if is-at-least 5.0.8; then
 #antigen apply
 
 alias n="nvim"
+alias ss="python quickstart.py"
 alias playra="ssh 'playra@194.58.104.187'"
 alias rnm="rm -rf node_modules && npm install"
 alias es6="yarn add -D babel-cli babel-plugin-transform-object-rest-spread babel-preset-env"
