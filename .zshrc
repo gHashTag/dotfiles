@@ -48,18 +48,20 @@ if is-at-least 5.0.8; then
 
 alias n="nvim"
 alias playra="ssh 'playra@194.58.104.187'"
-alias rnm="rm -rf node_modules && npm install"
+alias reinstall="rm -rf node_modules/ && yarn cache clean && yarn install"
 alias es6="yarn add -D babel-cli babel-plugin-transform-object-rest-spread babel-preset-env"
 
 plugins=(zsh-autopair react-native vi-mode git npm node heroku yarn)
 
 alias reduxinit="npm i -S redux react-redux redux-thunk eslint-plugin-react firebase lodash prop-types react-native-fetch-blob react-native-image-picker redux-devtools-extension babel-jest babel-preset-react-native react-native-svg react-navigation react-test-renderer axios qs"
 alias rni="react-native init"
-alias ios="react-native run-ios --simulator='iPhone 5s'"
+alias video="xcrun simctl io booted recordVideo /Users/playra/Desktop/video.m4v"
+alias ios="yarn start-ios"
 alias iosx="react-native run-ios --simulator='iPhone X'"
-alias and="react-native run-android"
-alias emu="emulator @Pixel_XL_API_23"
-alias s="npm start -- --reset-cache"
+alias and="yarn start-android"
+alias anddevice="react-native run-android --variant=release"
+alias emu="emulator @Pixel_2_API_26"
+alias s="react-native start -- --reset-cache"
 alias nvimrc='vim ~/dotfiles/.nvimrc'
 alias vimrc='nvim ~/dotfiles/.vimrc'
 alias zshrc='nvim ~/dotfiles/.zshrc'
@@ -139,9 +141,10 @@ zle -N zle-keymap-select
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-source ~/.zsh/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source /Users/playra/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /Users/playra/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

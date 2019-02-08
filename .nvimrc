@@ -8,6 +8,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'altercation/vim-colors-solarized'
 Plug 'easymotion/vim-easymotion'
 Plug 'mxw/vim-jsx'
+Plug 'sbdchd/neoformat'
 Plug 'kern/vim-es7'
 Plug 'metakirby5/codi.vim'
 Plug 'tpope/vim-fugitive'
@@ -92,7 +93,11 @@ let g:cscope_update_on_start = 1
 Plug 'w0rp/ale'
 " Asynchronous Lint Engine (ALE)
 let g:ale_linters = {'jsx': ['eslint', 'flow']}
-let b:ale_fixers = ['prettier', 'eslint']
+" let b:ale_fixers = ['prettier', 'eslint']
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'css': ['prettier'],
+\}
 let g:ale_fix_on_save = 1
 
 lang en_US.UTF-8
