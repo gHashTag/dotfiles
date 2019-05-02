@@ -37,36 +37,13 @@ select Font in terminal 12 Droid Sans Mono Nerd Complete
 
 
 
-`brew install node`
+`brew install node watchman yarn antigen wget gifify neovim`
 
-`brew install watchman`
+`brew cask install graphiql java android-studio`
 
-`brew install yarn`
-
-`npm install -g mongo-hacker`
-
-`brew cask install graphiql`
-
-`npm install -g react-native-cli`
-
-`npm install -g eslint-plugin-react`
-
-`npm install -g gitbook-cli`
-
-`brew install antigen`
-
-`brew install wget`
+`npm install -g react-native-cli gitbook-cli nodemon`
 
 `sudo gem install cocoapods`
-
-`brew cask install android-studio`
-
-`brew cask install java`
-
-`brew install gifify`
-
-`npm install -g nodemon`
-
 
 fonts https://github.com/powerline/fonts/
 
@@ -76,11 +53,7 @@ vim plug https://github.com/junegunn/vim-plug
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-
-
 neo vim https://github.com/neovim/neovim/wiki/Installing-Neovim
-
-`brew install neovim`
 
 mkdir .config/nvim/init.vim
 
@@ -152,7 +125,3 @@ Install react-native-debugger https://github.com/jhen0409/react-native-debugger
 Telegram:
 
 `brew cask install telegram`
-
-iTerm2
-Config iTerm2 to Open New Tab with Same Directory
-https://medium.com/@blacksource/new-tab-iterm2-with-in-current-directory-627b0c31734a
