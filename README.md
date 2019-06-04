@@ -1,12 +1,20 @@
 # dotfiles
 
-`git clone https://github.com/gHashTag/dotfiles.git`
-
 Solarized color theme for OS X 10.7+ Terminal.app
 
 https://github.com/tomislav/osx-terminal.app-colors-solarized
 
 Clone and import Solarized Dark.terminal in preference terminal
+
+`git clone https://github.com/gHashTag/dotfiles.git`
+
+OhMyZsh!
+
+`curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh`
+
+Тема powerlevel9k
+
+`git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k`
 
 Window: column: 215; row: 60
 
@@ -19,38 +27,23 @@ brew https://brew.sh/index_ru.html
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-iTerm for Mac https://gist.github.com/kevin-smets/8568070
+`brew tap caskroom/fonts`
 
-`brew cask install iterm2`
+`brew cask install font-hack-nerd-font`
 
-`brew install node`
+`cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf`
 
-`brew install watchman`
+select Font in terminal 12 Droid Sans Mono Nerd Complete
 
-`brew install yarn`
 
-`npm install -g mongo-hacker`
 
-`brew cask install graphiql`
+`brew install node watchman yarn antigen wget gifify neovim`
 
-`npm install -g react-native-cli`
+`brew cask install graphiql java android-studio`
 
-`npm install -g eslint-plugin-react`
-
-`npm install -g gitbook-cli`
-
-`brew install antigen`
+`npm install -g react-native-cli gitbook-cli nodemon`
 
 `sudo gem install cocoapods`
-
-`brew cask install android-studio`
-
-`brew cask install java`
-
-`brew install gifify`
-
-`npm install -g nodemon`
-
 
 fonts https://github.com/powerline/fonts/
 
@@ -60,15 +53,7 @@ vim plug https://github.com/junegunn/vim-plug
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-`brew tap caskroom/fonts`
-
-`brew cask install font-hack-nerd-font`
-
-select 11.5 Droid Sans Mono Nerd Complete
-
 neo vim https://github.com/neovim/neovim/wiki/Installing-Neovim
-
-`brew install neovim`
 
 mkdir .config/nvim/init.vim
 
@@ -130,7 +115,7 @@ Unexpected header files:
 
 `sudo rm /usr/local/include/python2.7/greenlet/greenlet.h`
 
-`sudo rm /usr/local/include/python3.6m/greenlet/greenlet.h`
+`sudo rm /usr/local/include/python3.7m/greenlet/greenlet.h`
 
 
 Install react-native-debugger https://github.com/jhen0409/react-native-debugger
@@ -140,7 +125,3 @@ Install react-native-debugger https://github.com/jhen0409/react-native-debugger
 Telegram:
 
 `brew cask install telegram`
-
-iTerm2
-Config iTerm2 to Open New Tab with Same Directory
-https://medium.com/@blacksource/new-tab-iterm2-with-in-current-directory-627b0c31734a

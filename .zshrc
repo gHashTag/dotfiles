@@ -47,6 +47,7 @@ if is-at-least 5.0.8; then
 #antigen apply
 
 alias n="nvim"
+alias ss="python quickstart.py"
 alias playra="ssh 'playra@194.58.104.187'"
 alias reinstall="rm -rf node_modules/ && yarn cache clean && yarn install"
 alias es6="yarn add -D babel-cli babel-plugin-transform-object-rest-spread babel-preset-env"
@@ -140,7 +141,6 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
