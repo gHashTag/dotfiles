@@ -51,7 +51,7 @@ alias playra="ssh 'playra@194.58.104.187'"
 alias reinstall="rm -rf node_modules/ && yarn cache clean && yarn install"
 alias es6="yarn add -D babel-cli babel-plugin-transform-object-rest-spread babel-preset-env"
 
-plugins=(zsh-autopair react-native vi-mode git npm node heroku yarn)
+plugins=(react-native vi-mode git npm node heroku yarn)
 
 alias reduxinit="npm i -S redux react-redux redux-thunk eslint-plugin-react firebase lodash prop-types react-native-fetch-blob react-native-image-picker redux-devtools-extension babel-jest babel-preset-react-native react-native-svg react-navigation react-test-renderer axios qs"
 alias rni="react-native init"
