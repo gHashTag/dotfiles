@@ -14,7 +14,6 @@ Plug 'metakirby5/codi.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'bling/vim-airline'
 Plug 'majutsushi/tagbar'
@@ -26,9 +25,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'ervandew/supertab'
 Plug 'wokalski/autocomplete-flow'
-Plug 'flowtype/flow-language-server'
 let g:LanguageClient_serverCommands = {
-    \ 'javascript': ['flow-language-server', '--stdio'],
+    \ 'javascript': ['flow', 'lsp'],
     \ }
 Plug 'mboughaba/i3config.vim'
 set ft=i3config
@@ -38,10 +36,11 @@ Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='powerlineish'
 
 " Use deoplete.
+Plug 'carlitux/deoplete-ternjs', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'carlitux/deoplete-flow'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-  Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
