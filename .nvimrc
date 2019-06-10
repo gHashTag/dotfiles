@@ -91,12 +91,16 @@ let g:cscope_update_on_start = 1
 
 Plug 'w0rp/ale'
 " Asynchronous Lint Engine (ALE)
-let g:ale_linters = {'jsx': ['eslint', 'flow']}
-" let b:ale_fixers = ['prettier', 'eslint']
+" let g:ale_linters = {'jsx': ['eslint', 'flow']}
+let g:ale_linters = {
+\   'javascript': ['eslint', 'flow'],
+\}
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'css': ['prettier'],
 \}
+" Only run linters named in ale_linters settings.
+let g:ale_linters_explicit = 1
 let g:ale_fix_on_save = 1
 
 lang en_US.UTF-8
@@ -133,12 +137,7 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 Plug 'mxw/vim-jsx' "including: pangloss/vim-javascript jelera/vim-javascript-syntax othree/yajs
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files"
 
-" Ctrl P
-" Plug 'kien/ctrlp.vim'
-" set wildignore+=*/tmp/*,*/node_modules/*,*/android/*,app.json,yarn.lock,package.json,package-lock.json,*/__tests__/*,*.so,*.swp,*.zip
-
 " Initialize plugin system
-
 call plug#end()
 
 " Color Settings
