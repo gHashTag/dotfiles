@@ -57,7 +57,7 @@ plugins=(react-native vi-mode git npm node heroku yarn)
 alias reduxinit="npm i -S redux react-redux redux-thunk eslint-plugin-react firebase lodash prop-types react-native-fetch-blob react-native-image-picker redux-devtools-extension babel-jest babel-preset-react-native react-native-svg react-navigation react-test-renderer axios qs"
 alias rni="react-native init"
 alias video="xcrun simctl io booted recordVideo /Users/playra/Desktop/video.m4v"
-alias ios="yarn start-ios"
+alias ios="react-native run-ios --simulator='iPhone SE'"
 alias iosx="react-native run-ios --simulator='iPhone X'"
 alias and="yarn start-android"
 alias anddevice="react-native run-android --variant=release"
