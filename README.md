@@ -41,7 +41,7 @@ select Font in terminal 12 Droid Sans Mono Nerd Complete
 
 `brew cask install graphiql java android-studio`
 
-`npm install -g react-native-cli gitbook-cli nodemon`
+`npm install -g react-native-cli nodemon`
 
 `sudo gem install cocoapods`
 
