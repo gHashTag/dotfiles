@@ -4,6 +4,8 @@ DEFAULT_USER="$USER"
 bindkey -v
 bindkey jk vi-cmd-mode
 
+plugins=(react-native vi-mode git npm node heroku yarn zsh-autosuggestions zsh-syntax-highlighting zsh-syntax-highlighting)
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export PATH=/usr/local/bin:$PATH
@@ -38,22 +40,15 @@ if is-at-least 5.0.8; then
         done
     done
   fi
-
 #source /usr/local/share/antigen/antigen.zsh
-
 #antigen use oh-my-zsh
 #antigen use hlissner/zsh-autopair
-
 #antigen apply
-
 alias n="nvim"
 alias ss="python quickstart.py"
 alias playra="ssh 'playra@194.58.104.187'"
 alias reinstall="rm -rf node_modules/ && yarn cache clean && yarn install"
 alias es6="yarn add -D babel-cli babel-plugin-transform-object-rest-spread babel-preset-env"
-
-plugins=(react-native vi-mode git npm node heroku yarn)
-
 alias reduxinit="npm i -S redux react-redux redux-thunk eslint-plugin-react firebase lodash prop-types react-native-fetch-blob react-native-image-picker redux-devtools-extension babel-jest babel-preset-react-native react-native-svg react-navigation react-test-renderer axios qs"
 alias rni="react-native init"
 alias video="xcrun simctl io booted recordVideo /Users/playra/Desktop/video.m4v"
@@ -70,7 +65,6 @@ alias ctags='nvim ~/dotfiles/.ctags'
 alias tg='cd && cd Applications/tg && bin/telegram-cli -W'
 alias ..='cd ..'
 alias rdir='mkdir -p src/{components,actions,screens,helpers,reducers}'
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 ZSH_THEME="powerlevel9k/powerlevel9k"
@@ -94,57 +88,5 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-
+ZSH_DISABLE_COMPFIX="true"
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-prompt_context() {
-  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-  fi
-}
-
-function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/[NORMAL]}/(main|viins)/[INSERT]}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-source /Users/playra/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /Users/playra/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
