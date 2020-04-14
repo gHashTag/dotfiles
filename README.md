@@ -39,7 +39,7 @@ select Font in terminal 12 Droid Sans Mono Nerd Complete
 
 `brew install node watchman yarn antigen wget gifify neovim`
 
-`brew cask install graphiql java android-studio`
+`brew cask install java android-studio`
 
 `npm install -g react-native-cli nodemon`
 
