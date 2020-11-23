@@ -153,7 +153,8 @@ endfunction
 
 nnoremap <Leader>i :call BgToggleSol()<cr>
 let g:solarized_termcolors=16
-colorscheme solarized
+colorscheme monokai 
+" colorscheme solarized
 
 " Airline
 let g:airline#extensions#branch#enabled = 1
@@ -209,7 +210,7 @@ set shiftround                  "Round indent to nearest shiftwidth multiple
 map <C-n> :NERDTreeToggle <CR> 
 map <Leader> <Plug>(easymotion-prefix)
 map  <Leader>w <Plug>(easymotion-bd-w)
-:imap jk <Esc>
+:imap jj <Esc>
 :imap оо <Esc> 
 nmap <C-\> :TagbarToggle<CR>
 set pastetoggle=<C-j>

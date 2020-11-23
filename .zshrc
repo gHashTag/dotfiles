@@ -52,12 +52,12 @@ alias es6="yarn add -D babel-cli babel-plugin-transform-object-rest-spread babel
 alias reduxinit="npm i -S redux react-redux redux-thunk eslint-plugin-react firebase lodash prop-types react-native-fetch-blob react-native-image-picker redux-devtools-extension babel-jest babel-preset-react-native react-native-svg react-navigation react-test-renderer axios qs"
 alias rni="react-native init"
 alias video="xcrun simctl io booted recordVideo /Users/playra/Desktop/video.m4v"
-alias ios="react-native run-ios --simulator='iPhone SE'"
-alias iosx="react-native run-ios --simulator='iPhone X'"
-alias and="yarn start-android"
-alias anddevice="react-native run-android --variant=release"
-alias emu="emulator @Pixel_2_API_26"
-alias s="react-native start -- --reset-cache"
+alias ios="npx react-native run-ios --simulator='iPhone SE'"
+alias iosx="npx react-native run-ios --simulator='iPhone 11'"
+alias and="npx react-native run-android"
+alias anddevice="npx react-native run-android --variant=release"
+alias emu="emulator @Pixel_3_API_28"
+alias s="npx react-native start -- --reset-cache"
 alias nvimrc='vim ~/dotfiles/.nvimrc'
 alias vimrc='nvim ~/dotfiles/.vimrc'
 alias zshrc='nvim ~/dotfiles/.zshrc'
@@ -67,7 +67,9 @@ alias ..='cd ..'
 alias rdir='mkdir -p src/{components,actions,screens,helpers,reducers}'
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="agnoster"
+# ZSH_THEME="node"
+ZSH_THEME="spaceship"
 POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true

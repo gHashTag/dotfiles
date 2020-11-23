@@ -1,10 +1,10 @@
 [user]
-	name = Dimka Vasilyev
+	name = Playra
 	email = raoffonom@icloud.com
 [merge]
     opendiff  
     tool = opendiff
 [core]
-    excludesfile = /Users/xyz/.gitignore_global
+	excludesfile = /Users/playra/.gitignore
 [color]
     ui = true
